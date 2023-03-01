@@ -1,3 +1,10 @@
+<!-- 
+
+over flow for scroll make sure to hide so it does not surpass
+1 collum 5 rowss 
+5 column 1 row
+
+Be prepared for moible nav on wednesday-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,123 +12,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MuzakMaker - Smooth Jazz</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 <header>
-    <h1>Smooth Jazz</h1>
+    <h1>SMOOTH JAZZ</h1>
     <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.</p>
 </header>
 <nav>
     <ul>
-        <li>MuzakMaker</li>
-        <li>Trending Songs</li>
-        <li>Your playlists</li>
-        <li>Curated Playlists</li>
+        <li><a href = "#">MuzakMaker</a></li>
+        <li><a href = "#">Trending Songs</a></li>
+        <li><a href = "#">Your playlists</a></li>
+        <li><a href = "#">Curated Playlists</a></li>
         <li><img src="images/duke-silver.png" alt="duke silver playing the saxaphone"></li>
     </ul>
 </nav>
 <main>
-    <section>
+    <section id="trendingSongs">
         <h2>Trending Songs</h2>
             <section>
-                Aloma
-                Artist Cali
-                <img src="aloma-cover.png" alt ="Picture of Aloma artist album">
-                <figure>
-                    <audio controls src="audio/aloma.mp3"> </audio>
-                </figure>
+                <h3>Aloma</h3>
+                <dl>
+                    <dt>Artist</dt>
+                    <dd>Cali</dd>
+                </dl>
+                <img src="images/aloma-cover.png" alt ="Picture of Aloma artist album">
+                <audio controls src="audio/aloma.mp3"> </audio>
             </section>
             <section>
-                My Road
-                Artist Nesterouk
-                <img src="my-road-cover.png" alt="picture of a black road with yellow lines in the desert with a blue sky and mountains">
-                <figure>
-                    <audio controls src="my-road.mp3"> </audio>
-                </figure>
+                <h3>My Road</h3>
+                <dl>
+                    <dt>Artist</dt>
+                    <dd>Nesterouk</dd>
+                </dl>
+                <img src="images/my-road-cover.png" alt="picture of a black road with yellow lines in the desert with a blue sky and mountains">
+                <audio controls src="my-road.mp3"> </audio>
             </section>
             <section>
-                Papaya
-                Artist Dredstudio
-                <img src="papaya-cover.png" alt="picture of a papaya split in half with a green plain background">
-                <figure>
-                    <audio controls src="papaya.mp3"> </audio>
-                </figure>
+                <h3>Papaya</h3>
+                <dl>
+                    <dt>Artist</dt>
+                    <dd>Dredstudio</dd>
+                </dl>
+                <img src="images/papaya-cover.png" alt="picture of a papaya split in half with a green plain background">
+                <audio controls src="papaya.mp3"> </audio>
             </section>
             <section>
-                Smoothies
-                Artist Black Rhomb
-                <img src="smoothies-cover.png" alt =" picture of a pinaple pink cup with straw, strawberries in a clear bowl, oranges, bannanas on a table with a pink background.">
-                <figure>
+                <h3>Smoothies</h3>
+                <dl>
+                    <dt>Artist</dt>
+                    <dd>Black Rhomb</dd>
+                </dl>
+                <img src="images/smoothies-cover.png" alt =" picture of a pinaple pink cup with straw, strawberries in a clear bowl, oranges, bannanas on a table with a pink background.">
                     <audio controls src="smoothies.mp3"> </audio>
-                </figure>
             </section>
             <section>
-                Successful Performance
-                Artist Ricky Bombino
-                <img src="successful-performance-cover.png" alt="picture of man with read shirt on with a big smile with a background of a blue brick wall">
-                <figure>
-                    <audio controls src="successful-performance.mp3"> </audio>
-                </figure>
+                <h3>Successful Performance</h3>
+                <dl>
+                    <dt>Artist</dt>
+                    <dd>Ricky Bombino</dd>
+                </dl>
+                <img src="images/successful-performance-cover.png" alt="picture of man with read shirt on with a big smile with a background of a blue brick wall">
+                <audio controls src="successful-performance.mp3"> </audio>
             </section>
         <p>More trending</p>
     </section>
 
-    <section>
+    <section class="playlists">
         <h2>Your Playlists</h2>
         <section>
-            <img src="best-of-2020-cover.png" alt=" Picture of the numbers 2020 with flames.">
-            Best of 2020
-            The music that got you through the lock down.
+            <img src="images/best-of-2020-cover.png" alt=" Picture of the numbers 2020 with flames.">
+            <h3>Best of 2020</h3>
+            <p>The music that got you through the lock down.</p>
         </section>
         <section>
-            <img src="pumpkin-spice-cover.png" alt="picture of a pumkin spice latte with a whip cream design of a leaf.">
-            Pumpkin Spice
-            Creamy and spicy, just like your favorite autumnal latte.
+            <img src="images/pumpkin-spice-cover.png" alt="picture of a pumkin spice latte with a whip cream design of a leaf.">
+            <h3>Pumpkin Spice</h3>
+            <p>Creamy and spicy, just like your favorite autumnal latte.</p>
         </section>
         <section>
-            <img src="quiet-storm-cover.png" alt=" picture of clouds with thunder striking through">
-            Quiet Storm
-            Slow tempos and relaxed rhythms. 
+            <img src="images/quiet-storm-cover.png" alt=" picture of clouds with thunder striking through">
+            <h3>Quiet Storm</h3>
+            <p>Slow tempos and relaxed rhythms.</p> 
         </section>
         <section>
-            <img src="smooth-jazz-cover.png" alt=" cover of an older white man wearing a green shirt and glasses">
-            Smooth Jazz
-            The pioneers of smooth jazz
+            <img src="images/smooth-jazz-cover.png" alt=" cover of an older white man wearing a green shirt and glasses">
+            <h3>Smooth Jazz</h3>
+            <p>The pioneers of smooth jazz</p>
         </section>
         <section>
-            <img src="smooth-study-cover.png" alt=" Picture of someone typing on their laptop.">
-            Smooth Study
-            Background music to keep you going while you study. 
+            <img src="images/smooth-study-cover.png" alt=" Picture of someone typing on their laptop.">
+            <h3>Smooth Study</h3>
+            <p>Background music to keep you going while you study.</p> 
         </section>
         All your playlists
     </section>
-    
-    <section>
+
+    <section class="Cplaylists">
         <h2>Curated Playlists</h2>
         <section>
-            <img src="boozy-brunch-cover.png" alt="Picture of multiple people clanking cups together.">
-            Boozy Brunch
-            Light up the afternoon with these energetic hits. 
+            <img src="images/boozy-brunch-cover.png" alt="Picture of multiple people clanking cups together.">
+            <h3>Boozy Brunch</h3>
+            <p>Light up the afternoon with these energetic hits. </p>
         </section>
         <section>
-            <img src="dinner-party-cover.png" alt=" Picture of a wooden table with a dinner set up with candles appetizers and meals.">
-            Dinner Party
-            Background music to give your party life, but allow your guests to chat. 
+            <img src="images/dinner-party-cover.png" alt=" Picture of a wooden table with a dinner set up with candles appetizers and meals.">
+            <h3>Dinner Party</h3>
+            <p>Background music to give your party life, but allow your guests to chat. </p>
         </section>
         <section>
-            <img src="mellow-cover.png" alt=" Picture of two people sitting on a bench outside durng the fall season under a stree with yellow leaves.">
-            Mellow
-            Relax after a stressful day with this collection of extra smooth jazz.
+            <img src="images/mellow-cover.png" alt=" Picture of two people sitting on a bench outside durng the fall season under a stree with yellow leaves.">
+            <h3>Mellow</h3>
+            <p>Relax after a stressful day with this collection of extra smooth jazz.</p>
         </section>
         <section>
-            <img src="jazz-chill-cover.png" alt=" Close up shot of a red flower.">
-            Jazz and Chill
-            Set the mood with these silky sounds.
+            <img src="images/jazz-chill-cover.png" alt=" Close up shot of a red flower.">
+            <h3>Jazz and Chill</h3>
+            <p>Set the mood with these silky sounds.</p>
         </section>
         <section>
-            <img src="smooth-saxophone-cover.png" alt="Picture of multiple people playing the saxaphone lined up in a row.">
-            Jazz Saxophone
-            The greatest collection of your sax favorites.
+            <img src="images/smooth-saxophone-cover.png" alt="Picture of multiple people playing the saxaphone lined up in a row.">
+            <h3>Jazz Saxophone</h3>
+            <p>The greatest collection of your sax favorites.</p>
         </section>
         More curated
     </section>
