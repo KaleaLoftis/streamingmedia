@@ -2,8 +2,7 @@
 html {
     background-color:#020659;
     
-  }
-
+}
 body {
     margin:0 auto; /* centers body in middle of viewport */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -13,7 +12,6 @@ body {
     color: white;
 
 }
-
 nav {
     background-color: #030A8c;
     grid-row: 1/2;
@@ -29,7 +27,21 @@ main {
 background-color: green;
 }
 
-h1 {
+div {
+    background-color: pink;
+}
+
+#mainId {
+    display: none;
+}
+
+footer p {
+    font-size: .75em;
+}
+
+
+/* Text */
+ h1 {
     font-size: 1.25em;
     font-variant: small-caps;
 }
@@ -58,27 +70,6 @@ dl {
     margin-top: 0px;
 }
 
-div {
-    background-color: pink;
-}
-
-#mainId {
-    display: none;
-}
-
-#maroonButton {
-    margin-left: 10px;
-    padding: 12px 20px;
-    display: inline-block;
-    border-radius:5px;
-    background-color: #590242;
-}
-
-footer p {
-    font-size: .75em;
-}
-
-
 
 /* Menu CSS*/
 ul {
@@ -90,7 +81,6 @@ ul {
     margin-bottom: 0px;
     
 }
-
 a { 
     text-decoration: none;
     color: white;
@@ -153,22 +143,20 @@ input:checked ~ label span:after {
 }
 input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
     top: 0;
-} */
-/* End of Menu CSS */
+} 
 
+
+
+/*Scroll Customizations */
 
 .scroll {
-    display:grid;
-   /* grid-template-columns: repeat(5, 1fr); FIX ME  */ 
-    overflow-x: auto;
-    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
-
 .scroll section {
     margin: 10px;
     position: relative; /* keep it in the spot where it should be according to HTML */
 }
-
 .scroll div {
     position: absolute; /* in relation to nearest element (section */
     top: 251px; /* pushes scroll down */ 
@@ -177,38 +165,15 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     height: 50px;
     width: 301px;
 }
-
 dl {
     display: flex; 
 }
-
 dt {
     padding-right: 1px;
     
 }
 
-/* Audio  CSS */
-audio {
-    position: absolute;
-    bottom: 120px;
-    left: 5px;
-}
-
-audio::-webkit-media-controls-mute-button {
-    background-color: white;
-    border-radius: 50%;
-}
-audio::-webkit-media-controls-play-button {
-    background-color: #ffffff;
-    border-radius: 50%;
-}
-audio::-webkit-media-controls-enclosure {
-    background-color: rgba(255,255,255, .5);
-}
-/* End of Audio CSS */
- 
 /* Scroll Bar  CSS */
-
 #trending ::-webkit-scrollbar {
     width: 15px;
 }
@@ -235,12 +200,29 @@ audio::-webkit-media-controls-enclosure {
     background: white; 
 }
 
-/* End of Scroll CSS */
+
+/* Audio  CSS */
+audio {
+    position: absolute;
+    bottom: 120px;
+    left: 5px;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: white;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255,255,255, .5);
+}
 
 
 
-/* Media screen */
-
+/* Media Query */
 @media screen and (min-width:375px) {
     ul {
         list-style:none;
