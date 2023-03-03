@@ -14,33 +14,28 @@ body {
 }
 nav {
     background-color: #030A8c;
-    grid-row: 1/2;
+    grid-row: 1/2; /* moves nav above header */
 }
 
 header {
     background-image: linear-gradient(to right, #2104d9, #030Abc, #020873, #020659);
-    grid-row:2/3;
+    grid-row:2/3; /* moves header under nav */
     padding: 10px;
-}
-
-main {
-background-color: green;
-}
-
-div {
-    background-color: pink;
 }
 
 #mainId {
     display: none;
 }
 
-footer p {
-    font-size: .75em;
+footer {
+    margin-top: 15px;
 }
 
 
-/* Text */
+/* Text style */
+header p {
+    text-align: left;
+}
  h1 {
     font-size: 1.25em;
     font-variant: small-caps;
@@ -48,26 +43,38 @@ footer p {
 
 h2 {
     padding-left: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
 h2, h3 {
     font-size: 1em;
+    text-transform: uppercase;
 }
 
-h2, h3, dl, dt, dd{
+h2, h3, dl, dt, dd, footer{
     color:#590242;
 }
 
 h3 {
     margin-bottom: 0px; ;
-}
+    margin-top: 5px;
 
+}
+li {
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+p {
+    text-align: center;
+}
 p, dl, dd {
     font-size: 1em;
 }
 
-dl {
-    margin-top: 0px;
+footer p {
+    font-size: .75em;
 }
 
 
@@ -150,8 +157,11 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 /*Scroll Customizations */
 
 .scroll {
+    width: 375px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 .scroll section {
     margin: 10px;
@@ -159,7 +169,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 }
 .scroll div {
     position: absolute; /* in relation to nearest element (section */
-    top: 251px; /* pushes scroll down */ 
+    top: 251px;px;/* pushes scroll down */ 
     background-color: rgba(255,255,255, .75);
     padding: 5px;
     height: 50px;
@@ -167,11 +177,17 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 }
 dl {
     display: flex; 
+    margin-top: 5px;
+
 }
 dt {
     padding-right: 1px;
-    
+    font-style: italic;
 }
+dd {
+    margin-left: 10px;
+}
+
 
 /* Scroll Bar  CSS */
 #trending ::-webkit-scrollbar {
@@ -195,6 +211,7 @@ dt {
 }
 #playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
     background:#020659;
+    border-radius: 5px;
 }
 #playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
     background: white; 
@@ -220,10 +237,53 @@ audio::-webkit-media-controls-enclosure {
     background-color: rgba(255,255,255, .5);
 }
 
+/* Maroon Buttons*/
+
+#button {
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #590242;
+    width: 150px;
+    padding: 5px;
+    display: block;
+    margin: 15px 0 30px 30px;
+
+
+}
+
+/* Background Style for Playlists*/
+#lightBlue {
+    background-color: #0d8dfb;
+}
+#lightBlue section {
+    background-color: #2699fb;
+    padding: 10px;
+}
+#lightBlue h3 {
+    color: white;
+    text-align: center;
+}
+#darkBlue {
+    background-color: #030a8c;
+}
+#darkBlue h3 {
+    color: white;
+    text-align: center;
+}
+#darkBlue p {
+    color: white;
+    text-align: center;
+}
+#darkBlue section {
+    background-color: #020659;
+    padding: 10px;
+}
+
 
 
 /* Media Query */
 @media screen and (min-width:375px) {
+
     ul {
         list-style:none;
         display:grid;
@@ -236,22 +296,23 @@ audio::-webkit-media-controls-enclosure {
         width: 834px;
     }
     ul {
-        overflow: visible;
-        position: absolute;
+        overflow: visible; 
+        position: absolute; /*positions itself absolutelty at top*/
         top: 0;
-        width: 835px;
+        width: 834px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5columns 1 row */ 
         margin-top:0px;
+        height: auto;
     }
     label span, input {
-        display: none;
+        display: none; /* makes hamburger menu go away */
     }
     nav {
         padding-top: 0px;
     }
-    header {
-        margin-top: 20px;
+    .scroll {
+        width: 834px;
     }
 }
 
