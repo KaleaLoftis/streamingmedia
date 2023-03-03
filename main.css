@@ -1,6 +1,4 @@
 
-
-
 html {
     background-color:#020659;
     
@@ -9,9 +7,9 @@ html {
 body {
     margin:0 auto; /* centers body in middle of viewport */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display:grid;
     width: 375px;
     background-color: white;
-    display:grid;
     color: white;
 
 }
@@ -19,7 +17,6 @@ body {
 nav {
     background-color: #030A8c;
     grid-row: 1/2;
-    border-bottom: 0px;
 }
 
 header {
@@ -37,6 +34,10 @@ h1 {
     font-variant: small-caps;
 }
 
+h2 {
+    padding-left: 10px;
+}
+
 h2, h3 {
     font-size: 1em;
 }
@@ -45,8 +46,20 @@ h2, h3, dl, dt, dd{
     color:#590242;
 }
 
+h3 {
+    margin-bottom: 0px; ;
+}
+
 p, dl, dd {
     font-size: 1em;
+}
+
+dl {
+    margin-top: 0px;
+}
+
+div {
+    background-color: pink;
 }
 
 #mainId {
@@ -68,12 +81,13 @@ footer p {
 
 
 /* Menu CSS*/
-
 ul {
     overflow: hidden;
     max-height: 0;
     transition: max-height .2s ease-out;
     padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     
 }
 
@@ -139,7 +153,91 @@ input:checked ~ label span:after {
 }
 input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
     top: 0;
+} */
+/* End of Menu CSS */
+
+
+.scroll {
+    display:grid;
+   /* grid-template-columns: repeat(5, 1fr); FIX ME  */ 
+    overflow-x: auto;
+    overflow-y: hidden;
 }
+
+.scroll section {
+    margin: 10px;
+    position: relative; /* keep it in the spot where it should be according to HTML */
+}
+
+.scroll div {
+    position: absolute; /* in relation to nearest element (section */
+    top: 251px; /* pushes scroll down */ 
+    background-color: rgba(255,255,255, .75);
+    padding: 5px;
+    height: 50px;
+    width: 301px;
+}
+
+dl {
+    display: flex; 
+}
+
+dt {
+    padding-right: 1px;
+    
+}
+
+/* Audio  CSS */
+audio {
+    position: absolute;
+    bottom: 120px;
+    left: 5px;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: white;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255,255,255, .5);
+}
+/* End of Audio CSS */
+ 
+/* Scroll Bar  CSS */
+
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #020659;
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background:#020659;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: white; 
+}
+
+/* End of Scroll CSS */
+
+
 
 /* Media screen */
 
@@ -162,6 +260,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         width: 835px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin-top:0px;
     }
     label span, input {
         display: none;

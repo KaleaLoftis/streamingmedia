@@ -21,20 +21,20 @@ Be prepared for moible nav on wednesday-->
     </header>
     <nav>
         <h2 id="mainId">Main Nav</h2> <!-- make sure to hide -->
-            <input type = "checkbox" id="dropdown">
-            <label for = "dropdown"><span></span></label>
-            <ul>
-                <li><a href = "#">MuzakMaker</a></li>
-                <li><a href = "#">Trending Songs</a></li>
-                <li><a href = "#">Your playlists</a></li>
-                <li><a href = "#">Curated Playlists</a></li>
-                <li><a href = "#"><img src="images/duke-silver.png" alt="duke silver playing the saxaphone"></a></li>
-            </ul>
+        <input type = "checkbox" id="dropdown">
+        <label for = "dropdown"><span></span></label>
+        <ul>
+            <li><a href = "#">MuzakMaker</a></li>
+            <li><a href = "#">Trending Songs</a></li>
+            <li><a href = "#">Your playlists</a></li>
+            <li><a href = "#">Curated Playlists</a></li>
+            <li><a href = "#"><img src="images/duke-silver.png" alt="duke silver playing the saxaphone"></a></li>
+        </ul>
     </nav>
     <main>
-        <section id="trendingSongs">
+        <section id="trending">
             <h2>Trending Songs</h2>
-            <div id="scroll">
+            <div class="scroll">
                 <section>
                     <div>
                         <h3>Aloma</h3>
@@ -53,31 +53,31 @@ Be prepared for moible nav on wednesday-->
                             <dt>Artist</dt>
                             <dd>Nesterouk</dd>
                         </dl>
-                        <img src="images/my-road-cover.png" alt="picture of a black road with yellow lines in the desert with a blue sky and mountains">
-                        <audio controls src="my-road.mp3"> </audio>
                     </div>
+                    <img src="images/my-road-cover.png" alt="picture of a black road with yellow lines in the desert with a blue sky and mountains">
+                    <audio controls src="audio/my-road.mp3"> </audio>
                 </section>
                 <section>
                     <div>
+                        <h3>Papaya</h3>
                         <dl>
                             <dt>Artist</dt>
                             <dd>Dredstudio</dd>
                         </dl>
-                        <img src="images/papaya-cover.png" alt="picture of a papaya split in half with a green plain background">
-                        <audio controls src="papaya.mp3"> </audio>
                     </div>
-                    <h3>Papaya</h3>
+                    <img src="images/papaya-cover.png" alt="picture of a papaya split in half with a green plain background">
+                    <audio controls src="audio/papaya.mp3"> </audio>
                 </section>
                 <section>
                     <div>
                         <h3>Smoothies</h3>
-                    <dl>
-                        <dt>Artist</dt>
-                        <dd>Black Rhomb</dd>
-                    </dl>
-                    <img src="images/smoothies-cover.png" alt =" picture of a pinaple pink cup with straw, strawberries in a clear bowl, oranges, bannanas on a table with a pink background.">
-                        <audio controls src="smoothies.mp3"> </audio>
+                        <dl>
+                            <dt>Artist</dt>
+                            <dd>Black Rhomb</dd>
+                        </dl>
                     </div>
+                    <img src="images/smoothies-cover.png" alt =" picture of a pinaple pink cup with straw, strawberries in a clear bowl, oranges, bannanas on a table with a pink background.">
+                    <audio controls src="audio/smoothies.mp3"> </audio>
                 </section>
                 <section>
                     <div>
@@ -86,9 +86,9 @@ Be prepared for moible nav on wednesday-->
                             <dt>Artist</dt>
                             <dd>Ricky Bombino</dd>
                         </dl>
-                        <img src="images/successful-performance-cover.png" alt="picture of man with read shirt on with a big smile with a background of a blue brick wall">
-                        <audio controls src="successful-performance.mp3"> </audio>
                     </div>
+                    <img src="images/successful-performance-cover.png" alt="picture of man with read shirt on with a big smile with a background of a blue brick wall">
+                    <audio controls src="audio/successful-performance.mp3"> </audio>
                 </section>
             </div>
             <p id="maroonButton">More trending</p>
@@ -146,8 +146,8 @@ Be prepared for moible nav on wednesday-->
             <section>
                 <div>
                     <img src="images/dinner-party-cover.png" alt=" Picture of a wooden table with a dinner set up with candles appetizers and meals.">
-                <h3>Dinner Party</h3>
-                <p>Background music to give your party life, but allow your guests to chat. </p>
+                    <h3>Dinner Party</h3>
+                    <p>Background music to give your party life, but allow your guests to chat. </p>
                 </div>
             </section>
             <section>
@@ -170,11 +170,9 @@ Be prepared for moible nav on wednesday-->
                     <h3>Jazz Saxophone</h3>
                     <p>The greatest collection of your sax favorites.</p>
                 </div>
-            
             </section>
-            <p>More curated</p>
+            <p id="maroonButton">More curated</p>
         </section>
-
     </main>
     <footer>Copyright 2022 Smooth Jazz</footer>
 </body>
