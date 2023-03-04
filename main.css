@@ -153,12 +153,17 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 } 
 
 .scrolltwo {
-    height: 400px;
-    width: 50%;
+    height: 500px;
+    width: 400px;
     display:grid;
     grid-template-rows: repeat(5, 1fr);
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.scrolltwo section{
+    margin: 10px;
+    position: relative;
 }
 
 .scrolltwo img {
@@ -326,6 +331,7 @@ audio::-webkit-media-controls-enclosure {
         position: relative;
         left: 580px; /* makes button move left */
     }
+
 
 
   
