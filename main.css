@@ -152,25 +152,9 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     top: 0;
 } 
 
-.scrolltwo {
-    height: 500px;
-    width: 400px;
-    display:grid;
-    grid-template-rows: repeat(5, 1fr);
-    overflow-x: hidden;
-    overflow-y: auto;
-}
 
-.scrolltwo section{
-    margin: 10px;
-    position: relative;
-}
 
-.scrolltwo img {
-float: left;
-}
-
-.scroll {
+.scroll1 {
     width: 375px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -179,11 +163,11 @@ float: left;
 } 
 
 /*Scroll Customizations */
-.scroll section {
+.scroll1 section {
     margin: 10px;
     position: relative; /* keep it in the spot where it should be according to HTML */
 }
-.scroll div {
+.scroll1 div {
     position: absolute; /* in relation to nearest element (section */
     top: 251px;px;/* pushes scroll down */ 
     background-color: rgba(255,255,255, .75);
@@ -202,6 +186,20 @@ dt {
 }
 dd {
     margin-left: 10px;
+}
+
+
+.scroll2 {
+    width: 375px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scroll2 section {
+    margin: 10px;
+    position: relative; /* keep it in the spot where it should be according to HTML */
 }
 
 
@@ -264,6 +262,9 @@ audio::-webkit-media-controls-enclosure {
     display: block;
     margin: 15px 0 30px 30px;
 }
+#button:hover {
+    background-color: #020873;
+}
 
 /* Background Style for Playlists*/
 #lightBlue {
@@ -272,6 +273,9 @@ audio::-webkit-media-controls-enclosure {
 #lightBlue section {
     background-color: #2699fb;
     padding: 10px;
+}
+#lightBlue section:hover {
+    background-color: #590242;
 }
 #lightBlue h3 {
     color: white;
@@ -291,6 +295,9 @@ audio::-webkit-media-controls-enclosure {
 #darkBlue section {
     background-color: #020659;
     padding: 10px;
+}
+#darkBlue section:hover {
+    background-color:#590242;
 }
 
 /* Media Query */
@@ -324,13 +331,63 @@ audio::-webkit-media-controls-enclosure {
     nav {
         padding-top: 0px;
     }
-    .scroll {
+    .scroll1 {
        width: 834px;
     }
     #button {
-        position: relative;
+     /*   position: relative;
         left: 580px; /* makes button move left */
     }
+    /*vertical scroll */
+    .scroll2 {
+        height: 500px;
+        width: 400px;
+        display:grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(5, 1fr);
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .scroll2 img {
+    float: left;
+    }
+    .scroll2 section {
+        margin: 10px;
+        position: relative;
+    }
+    #button {
+        position: relative;
+        left: 580px;
+    }
+    #playlists {
+        width: 417px;
+    }
+    #curated {
+        width: 417px;
+    }
+
+    /* failed attempt trying to but playlists side by side will not work for the life of me */
+  /*  main {
+        width:846px;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    section .trending {
+        grid-column:  1 / 3;
+        grid-row: 1/2;
+    }
+    section .playlists {
+        grid-column: 1;
+        grid-row: 2/ 3;
+    }
+    section .curated {
+        grid-column: 2 / 3;
+        grid-row:  2 / 3;
+    }
+    */
+  
+ 
 
 
 
