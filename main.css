@@ -152,9 +152,18 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     top: 0;
 } 
 
+.scrolltwo {
+    height: 400px;
+    width: 50%;
+    display:grid;
+    grid-template-rows: repeat(5, 1fr);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
-
-
+.scrolltwo img {
+float: left;
+}
 
 .scroll {
     width: 375px;
@@ -162,7 +171,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     grid-template-columns: repeat(5, 1fr);
     overflow-x: auto;
     overflow-y: hidden;
-}
+} 
 
 /*Scroll Customizations */
 .scroll section {
@@ -311,18 +320,15 @@ audio::-webkit-media-controls-enclosure {
         padding-top: 0px;
     }
     .scroll {
-        width: 834px;
+       width: 834px;
     }
     #button {
         position: relative;
-        left: 580px;
+        left: 580px; /* makes button move left */
     }
 
-    main {
-        display: grid;
-        grid-template-rows: 1fr;
 
-    }
+  
 
 
 }
