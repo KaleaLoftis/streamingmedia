@@ -153,8 +153,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 } 
 
 
-
-.scroll1 {
+.scroll1 { 
     width: 375px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -169,7 +168,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 }
 .scroll1 div {
     position: absolute; /* in relation to nearest element (section */
-    top: 251px;px;/* pushes scroll down */ 
+    top: 251px;/* pushes scroll down */ 
     background-color: rgba(255,255,255, .75);
     padding: 5px;
     height: 50px;
@@ -199,7 +198,6 @@ dd {
 
 .scroll2 section {
     margin: 10px;
-    position: relative; /* keep it in the spot where it should be according to HTML */
 }
 
 
@@ -234,7 +232,7 @@ dd {
 
 /* Audio  CSS */
 audio {
-    position: absolute;
+    position: absolute; /* moves audio menu on images */
     bottom: 120px;
     left: 5px;
 }
@@ -253,16 +251,15 @@ audio::-webkit-media-controls-enclosure {
 
 /* Maroon Buttons*/
 
-#button {
+.button {
     text-decoration: none;
     border-radius: 5px;
     background-color: #590242;
     width: 150px;
     padding: 5px;
-    display: block;
     margin: 15px 0 30px 30px;
 }
-#button:hover {
+.button:hover {
     background-color: #020873;
 }
 
@@ -301,19 +298,9 @@ audio::-webkit-media-controls-enclosure {
 }
 
 /* Media Query */
-@media screen and (min-width:375px) {
-
-    ul {
-        list-style:none;
-        display:grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    }
-}
-
 @media screen and (min-width:834px) {
     body {
         width: 834px;
-
     }
     ul {
         overflow: visible; 
@@ -334,14 +321,11 @@ audio::-webkit-media-controls-enclosure {
     .scroll1 {
        width: 834px;
     }
-    #button {
-     /*   position: relative;
-        left: 580px; /* makes button move left */
-    }
+
     /*vertical scroll */
     .scroll2 {
         height: 500px;
-        width: 400px;
+        width:auto;
         display:grid;
         grid-template-columns: none;
         grid-template-rows: repeat(5, 1fr);
@@ -351,50 +335,32 @@ audio::-webkit-media-controls-enclosure {
     .scroll2 img {
     float: left;
     }
-    .scroll2 section {
-        margin: 10px;
-        position: relative;
-    }
-    #button {
-        position: relative;
-        left: 580px;
-    }
-    #playlists {
-        width: 417px;
-    }
-    #curated {
-        width: 417px;
-    }
 
-    /* failed attempt trying to but playlists side by side will not work for the life of me */
-  /*  main {
+    .button {
+        float: right;
+        margin-right: 50px;
+    }
+    
+    main {
         width:846px;
         display:grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
     }
-    section .trending {
+    #trending {
         grid-column:  1 / 3;
         grid-row: 1/2;
     }
-    section .playlists {
-        grid-column: 1;
-        grid-row: 2/ 3;
+    #playlists {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
     }
-    section .curated {
+    #curated {
         grid-column: 2 / 3;
         grid-row:  2 / 3;
     }
-    */
-  
- 
-
-
-
-  
-
 
 }
+
 
 
 
