@@ -311,11 +311,13 @@ audio::-webkit-media-controls-enclosure {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5columns 1 row */ 
         margin-top:0px;
         height: auto;
+        list-style-type: none;
     }
     label span, input {
         display: none; /* makes hamburger menu go away */
     }
     nav {
+        width:834px;
         padding-top: 0px;
     }
     .scroll1 {
